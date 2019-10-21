@@ -1,5 +1,5 @@
 
-class Hauki:
+class Hiker:
     # Counts vowels in a text
     def count_vowels(self, inputtext):
         if inputtext is None:
@@ -62,11 +62,15 @@ class Hauki:
                 count_syllable = vowel_count - consecutive_vowel_count
                 poem_syllables.append(count_syllable)
 
-            print(",".join(map(str, poem_syllables)), end=',')
+            #print(",".join(map(str, poem_syllables)), end=',')
             if poem_syllables == hauki_match:
-                print("Yes")
+                poem_syllables.append('Yes')
+                print(poem_syllables)
             else:
-                print("No")
+                poem_syllables.append('No')
+                print(poem_syllables)
+
+        return poem_syllables
 
 
 ff = Hiker()
